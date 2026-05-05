@@ -1,0 +1,84 @@
+{
+    "roi": {
+      "lid": {
+        "left":  [
+            1319,
+            368,
+            188,
+            185
+        ],
+        "right": [
+            1574,
+            368,
+            172,
+            182
+        ]
+      },
+      "waffle": {
+        "upper_left":  [
+            1394,
+            234,
+            232,
+            134
+        ],
+        "upper_right": [
+            1670,
+            242,
+            221,
+            130
+        ]
+      }
+    },
+  
+    "threshold": {
+      "lid_close": {
+        "corr_thr": 0.46
+      },
+      "stuck_waffle": {
+        "brown_thr": 0.3,
+        "v_thr": 105
+      },
+      "bottom_waffle": {
+        "v_dark_thr": 85,
+        "min_ratio": 0.3
+      }
+    },
+  
+    "camera": {
+      "use_camera": true,
+      "index": 0,
+      "backend": "CAP_DSHOW",
+      "width": 1920,
+      "height": 1080,
+      "fps": 5,
+      "fourcc": "MJPG"
+    },
+  
+    "server": {
+      "host": "0.0.0.0",
+      "port": 9000,
+      "send_hz": 5.0
+    },
+  
+    "ref": {
+      "close_ref_left": "close_ref_left.png",
+      "close_ref_right": "close_ref_right.png"
+    },
+
+    "yolo": {
+      "model": "best.pt",
+      "conf": 0.25,
+      "imgsz": 640,
+      "host": "192.168.1.34",
+      "port": 9999,
+      "send_hz": 30.0,
+      "enable_send": true
+    },
+
+    "zmq": {
+      "port": 9999,
+      "stream_hz": 10.0
+    }
+
+  }
+  

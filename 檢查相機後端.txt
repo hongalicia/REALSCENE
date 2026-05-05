@@ -1,0 +1,16 @@
+2) 強制指定後端：CAP_DSHOW / CAP_MSMF
+
+BRIO 在某些 Windows/驅動版本下，用預設後端會打不開。
+
+優先試：
+
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+
+
+不行再試：
+
+cap = cv2.VideoCapture(0, cv2.CAP_MSMF)
+
+
+很多案例是：CAP_DSHOW 成功、CAP_MSMF 失敗（或反過來）。
+

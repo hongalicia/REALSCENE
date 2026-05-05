@@ -1,0 +1,11 @@
+__pycache__/
+venv/
+.venv/
+env/
+ENV/
+bin/
+include/
+lib/
+share/
+.env
+*.mp4
